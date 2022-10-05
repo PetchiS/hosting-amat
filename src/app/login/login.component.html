@@ -1,0 +1,21 @@
+<div class="h-100 w-100 login-container" style="">
+
+    <div class="login-page">
+        <div class="m-4 header-font">Login</div>
+        <div class="m-4 w-80">
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput placeholder="User name" required [(ngModel)]="userName">
+            </mat-form-field>
+        </div>
+        <div class="m-4 w-80">
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password" required [(ngModel)]="password">
+            </mat-form-field>
+        </div>
+        <div class="m-4">
+            <button mat-raised-button (click)="onLogin()">Submit</button>
+        </div>
+    </div>
+</div>

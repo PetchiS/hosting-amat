@@ -1,0 +1,30 @@
+.example-full-width {
+    width: 50%;
+}
+
+.login-page {
+    left: 25%;
+    top: 25%;
+    position: absolute;
+    height: 40%;
+    width: 50%;
+    background: white;
+    border: 1px solid darkgrey;
+}
+
+.mat-raised-button {
+    background-color: #673ab7;
+    color: white;
+}
+
+.header-font {
+    font-weight: 800;
+    font-size: 25px;
+    /* color: #673ab7; */
+}
+
+.login-container {
+    background-image: url(../../assets/fruits.png);
+    background-size: cover;
+    border: 1px solid darkgrey;
+}

@@ -1,0 +1,43 @@
+<div class="w-100 h-100 home-container">
+    <div class="p-4 header-class">
+        <h1 style="text-align: center;">All Items</h1>
+        <span>
+            <mat-icon class="logout-button" title="Logout" (click)=logout()>logout</mat-icon>
+        </span>
+    </div>
+    <div style="height:40%;width:100%">
+        <div class="d-flex align">
+            <div *ngFor="let card of fruits" class="p-4">
+                <mat-card [ngStyle]="{'background': card.color}">
+                    <div class="card-display p-2">
+                        {{card.text}}
+                    </div>
+                    <div class="card-display p-2">{{ card.number}}</div>
+                    <div class="card-display p-4">
+                        <button mat-fab color="primary" (click)=addFruit(card,fruits) [disabled]="isOthers">
+                            <mat-icon title="Add fruit">add</mat-icon>
+                        </button>
+                        <span style="padding-left:2px;">
+                        <button mat-fab color="primary" (click)=removeFruit(card,fruits) [disabled]="isOthers">
+                            <mat-icon title="Remove fruit">minimize</mat-icon>
+                        </button>
+                    </span>
+                    </div>
+                </mat-card>
+            </div>
+
+        </div>
+
+    </div>
+    <div style="height:40%;width:100%">
+        <div class="added-container" *ngIf="displayCard">
+            <div class="p-1" style="text-align: center;font-weight: bold;">Basket Stack</div>
+            <mat-card>
+                <div *ngFor="let fruit of stack" class="">
+                    <div [ngStyle]="{'background':fruit}" style="height:10px;border:1px solid grey"></div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+
+</div>
